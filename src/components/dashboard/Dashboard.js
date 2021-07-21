@@ -4,10 +4,11 @@ import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
 import { Redirect } from "react-router-dom";
+import Home from "./home.png";
 class Dashboard extends React.Component {
   render() {
     const { jobs, auth } = this.props;
-    if (!auth.uid) return <Redirect to="/signin" />;
+    if (!auth.uid) return <img src={Home} width="100%" height="565px" />;
     return (
       <div className="dashboard container">
         <div className="row">

@@ -44,6 +44,7 @@ class SignIn extends Component {
         </form>
         <h5 className="black-text">Test Credentials</h5>
         <p className="black-text">Email: test@test.com , Password: 123456</p>
+        <p className="black-text">Email: sharad@gmail.com , Password: sharad</p>
       </div>
     );
   }
