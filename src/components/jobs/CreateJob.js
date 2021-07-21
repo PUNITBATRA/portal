@@ -6,6 +6,7 @@ class CreateJob extends Component {
   state = {
     title: "",
     content: "",
+    location: "",
   };
   handleChange = (e) => {
     this.setState({
@@ -16,7 +17,7 @@ class CreateJob extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     // console.log(this.state);
-    if (this.state.title && this.state.content) {
+    if (this.state.title && this.state.content && this.state.location) {
       this.props.createJob(this.state);
       this.props.history.push("/");
     } else {
@@ -41,6 +42,10 @@ class CreateJob extends Component {
               onChange={this.handleChange}
             ></textarea>
             <label htmlFor="content">Job Description</label>
+          </div>
+          <div className="input-field">
+            <input type="text" id="location" onChange={this.handleChange} />
+            <label htmlFor="location">Location</label>
           </div>
           <div className="input-field">
             <button className="btn pink lighten-1">Create</button>

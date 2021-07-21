@@ -3,7 +3,6 @@ import JobList from "../jobs/JobList";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
-import { Redirect } from "react-router-dom";
 import Home from "./home.png";
 class Dashboard extends React.Component {
   render() {
@@ -12,7 +11,7 @@ class Dashboard extends React.Component {
     return (
       <div className="dashboard container">
         <div className="row">
-          <div className="col s12 m6">
+          <div className="col s12 m12">
             <JobList jobs={jobs} />
           </div>
         </div>

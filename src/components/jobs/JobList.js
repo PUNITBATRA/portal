@@ -1,18 +1,18 @@
 import React from "react";
 import JobSummary from "./JobSummary";
-import { Link } from "react-router-dom";
 const JobList = ({ jobs }) => {
-  return (
-    <div className="job-list section">
-      {jobs &&
-        jobs.map((job) => {
-          return (
-            <Link to={"/job/" + job.id} key={job.id}>
-              <JobSummary job={job} />
-            </Link>
-          );
-        })}
-    </div>
-  );
+  if (jobs) {
+    return (
+      <div className="job-list section">
+        {jobs &&
+          jobs.map((job) => {
+            return <JobSummary job={job} />;
+          })}
+      </div>
+    );
+  } else {
+    return <h4 style={{ padding: "25%" }}>Your posted job will appear here</h4>;
+  }
 };
+
 export default JobList;

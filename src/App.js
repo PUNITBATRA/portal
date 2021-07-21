@@ -5,7 +5,7 @@ import SignUp from "./components/auth/SignUp";
 import Dashboard from "./components/dashboard/Dashboard";
 import Navbar from "./components/layout/Navbar";
 import CreateJob from "./components/jobs/CreateJob";
-import JobDetails from "./components/jobs/JobDetails";
+import JobApplications from "./components/jobs/JobApplications";
 function App() {
   return (
     <BrowserRouter>
@@ -13,7 +13,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Dashboard} />
-          <Route path="/job/:id" component={JobDetails} />
+          <Route path="/job/:id" component={JobApplications} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />
           <Route path="/create" component={CreateJob} />
